@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:orientation="vertical"
+    tools:context=".fragments.ReverseStringFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REVERSE NUMBER"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        />
+
+    <EditText
+        android:layout_margin="20dp"
+        android:inputType="text"
+        android:id="@+id/etReverseString"
+        android:textSize="25dp"
+        android:hint="Enter string"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/btnReverse"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="REVERSE"
+        android:textSize="25dp"
+        android:layout_margin="50dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/tvReverseOutput"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>

@@ -12,6 +12,7 @@ import com.example.fragmentsassesment.fragments.AreaFragment;
 import com.example.fragmentsassesment.fragments.AutomorphicFragment;
 import com.example.fragmentsassesment.fragments.PalindromeFragment;
 import com.example.fragmentsassesment.fragments.ReverseNumFragment;
+import com.example.fragmentsassesment.fragments.ReverseStringFragment;
 import com.example.fragmentsassesment.fragments.SumFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnReverseNum;
     private Button btnPalindrome;
     private Button btnAutomorphic;
+    private Button btnReverseString;
 
     private Boolean status = true;
 
@@ -34,13 +36,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnReverseNum = findViewById(R.id.btnReverseNum);
         btnPalindrome = findViewById(R.id.btnPalindrome);
         btnAutomorphic = findViewById(R.id.btnAutomorphic);
+        btnReverseString = findViewById(R.id.btnReverseString);
 
         btnSum.setOnClickListener(this);
         btnArea.setOnClickListener(this);
         btnReverseNum.setOnClickListener(this);
         btnPalindrome.setOnClickListener(this);
         btnAutomorphic.setOnClickListener(this);
-
+        btnReverseString.setOnClickListener(this);
     }
 
     @Override
@@ -81,7 +84,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
-
+            case R.id.btnReverseString:
+                ReverseStringFragment reverseStringFragment = new ReverseStringFragment();
+                fragmentTransaction.replace(R.id.fragmentContainer,reverseStringFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+                break;
 
         }
 
