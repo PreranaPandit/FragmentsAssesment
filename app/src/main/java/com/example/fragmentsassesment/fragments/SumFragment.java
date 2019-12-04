@@ -73,7 +73,7 @@ public class SumFragment extends Fragment implements View.OnClickListener {
 
             result = sumMath.sumNumbers();
 
-            tvResult.setText(Integer.toString(result));
+            tvResult.setText(Integer.toString(result) + " is output of Sum");
 
             Toast.makeText(getActivity(),"Sum is :"+result,Toast.LENGTH_LONG).show();
         }

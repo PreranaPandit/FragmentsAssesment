@@ -65,7 +65,7 @@ public class ReverseNumFragment extends Fragment implements View.OnClickListener
 
             result = MathematicActions.reverseNumber(revNum);
 
-            tvReverse.setText(Integer.toString(result)+" is a reverse output");
+            tvReverse.setText(Integer.toString(result)+" is a reverse number");
 
 
             Toast.makeText(getActivity(),"Reverse Number is :"+result,Toast.LENGTH_LONG).show();

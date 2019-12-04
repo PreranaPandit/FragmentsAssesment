@@ -63,7 +63,7 @@ public class ReverseStringFragment extends Fragment implements View.OnClickListe
 
             result = MathematicActions.reverseString(revStr);
 
-            tvReverse.setText(result+" is a reverse value");
+            tvReverse.setText(result+" is a reverse string");
 
 
             Toast.makeText(getActivity(),"Reverse Number is :"+result,Toast.LENGTH_LONG).show();

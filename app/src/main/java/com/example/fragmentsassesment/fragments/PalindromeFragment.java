@@ -50,10 +50,10 @@ public class PalindromeFragment extends Fragment{
 
                 if(isPalindrome)
                 {
-                    tvOutput.setText(etpalinNum.getText()+"is palindrome number");
+                    tvOutput.setText(etpalinNum.getText()+" is palindrome number");
                 }
                 else{
-                    tvOutput.setText(etpalinNum.getText()+"is not palindrome number");
+                    tvOutput.setText(etpalinNum.getText()+" is not palindrome number");
                 }
             }
         });
