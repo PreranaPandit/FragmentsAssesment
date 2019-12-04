@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.fragmentsassesment.fragments.AreaFragment;
+import com.example.fragmentsassesment.fragments.PalindromeFragment;
 import com.example.fragmentsassesment.fragments.ReverseNumFragment;
 import com.example.fragmentsassesment.fragments.SumFragment;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnArea;
     private Button btnSum;
     private Button btnReverseNum;
+    private Button btnPalindrome;
 
     private Boolean status = true;
 
@@ -28,10 +30,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSum = findViewById(R.id.btnSum);
         btnArea = findViewById(R.id.btnArea);
         btnReverseNum = findViewById(R.id.btnReverseNum);
+        btnPalindrome = findViewById(R.id.btnPalindrome);
 
         btnSum.setOnClickListener(this);
         btnArea.setOnClickListener(this);
         btnReverseNum.setOnClickListener(this);
+        btnPalindrome.setOnClickListener(this);
 
     }
 
@@ -58,6 +62,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnReverseNum:
                 ReverseNumFragment reverseNumFragment = new ReverseNumFragment();
                 fragmentTransaction.replace(R.id.fragmentContainer,reverseNumFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+                break;
+            case R.id.btnPalindrome:
+                PalindromeFragment palindromeFragment = new PalindromeFragment();
+                fragmentTransaction.replace(R.id.fragmentContainer,palindromeFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
