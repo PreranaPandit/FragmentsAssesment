@@ -44,4 +44,18 @@ public class MathematicActions {
         if(integer==reverse) return true;
         else return false;
     }
+
+    //check if number is palindrome or not
+    public static boolean isAutomorphic(int integer) {
+        int automorphic = integer;
+        int square = automorphic * automorphic;
+
+        String inputAutomorphic = automorphic + "";
+        String squareAutomorphic = square + "";
+
+      if(squareAutomorphic.endsWith(inputAutomorphic))
+          return true;
+      else
+          return false;
+    }
 }
