@@ -21,4 +21,14 @@ public class MathematicActions {
     public static float areaOfCircle( float radius){
         return (float) (Math.PI*radius*radius);
     }
+
+    public static int reverseNumber(int number){
+        int reverse = 0;
+        while(number != 0) {
+            int digit = number % 10;
+            reverse = reverse * 10 + digit;
+            number /= 10;
+        }
+        return reverse;
+    }
 }

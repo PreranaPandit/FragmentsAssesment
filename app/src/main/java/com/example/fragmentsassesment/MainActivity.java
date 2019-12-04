@@ -9,12 +9,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.fragmentsassesment.fragments.AreaFragment;
+import com.example.fragmentsassesment.fragments.ReverseNumFragment;
 import com.example.fragmentsassesment.fragments.SumFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnArea;
     private Button btnSum;
+    private Button btnReverseNum;
 
     private Boolean status = true;
 
@@ -25,9 +27,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnSum = findViewById(R.id.btnSum);
         btnArea = findViewById(R.id.btnArea);
+        btnReverseNum = findViewById(R.id.btnReverseNum);
 
         btnSum.setOnClickListener(this);
         btnArea.setOnClickListener(this);
+        btnReverseNum.setOnClickListener(this);
 
     }
 
@@ -51,6 +55,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
+            case R.id.btnReverseNum:
+                ReverseNumFragment reverseNumFragment = new ReverseNumFragment();
+                fragmentTransaction.replace(R.id.fragmentContainer,reverseNumFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+                break;
+
 
         }
 
